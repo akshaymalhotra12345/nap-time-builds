@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f5f1e9"><title>Pocket Note · Sample App</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;min-height:100svh;display:grid;place-items:center;padding:22px;background:#f5f1e9;color:#24322b;font-family:system-ui,-apple-system,sans-serif}.card{width:min(100%,430px);padding:clamp(23px,7vw,42px);border:1px solid #cfcbbb;border-radius:8px;background:#fbf9f3;box-shadow:9px 10px 0 #d9d3c3}.kicker{font:11px ui-monospace,monospace;letter-spacing:.1em;color:#73766c}.sample{float:right;color:#c2553e}.title{margin:24px 0 0;font-size:clamp(36px,10vw,52px);line-height:1;letter-spacing:-.07em}.desc{color:#73766c;line-height:1.5}label{display:block;margin:28px 0 8px;font:11px ui-monospace,monospace;color:#73766c}textarea{width:100%;min-height:150px;resize:vertical;padding:14px;border:1px solid #d1ccbd;border-radius:4px;background:#fffdf8;color:#24322b;font:15px/1.5 system-ui}button{width:100%;min-height:48px;margin-top:12px;border:0;border-radius:4px;background:#24322b;color:#fff9ed;font:600 13px system-ui;cursor:pointer}.saved{min-height:20px;color:#638047;font:12px ui-monospace,monospace}.back{display:inline-block;margin-top:12px;color:#666b60;font:11px ui-monospace,monospace;text-decoration:none}
+  </style>
+</head>
+<body><main class="card"><div class="kicker">NAP TIME BUILDS <span class="sample">SAMPLE APP</span></div><h1 class="title">Pocket Note</h1><p class="desc">Catch a thought now. Come back to it when the house is awake.</p><label for="note">ONE NEXT STEP OR GOOD IDEA</label><textarea id="note" maxlength="500" placeholder="Type a thought worth keeping…"></textarea><button id="save" type="button">Save this note</button><p id="saved" class="saved" aria-live="polite"></p><a id="back" class="back" href="/">← Back to the build list</a></main><script>
+    const base = location.pathname.startsWith('/nap-time-builds/') ? '/nap-time-builds/' : '/';
+    document.querySelector('#back').href = base;
+    const note=document.querySelector('#note'),saved=document.querySelector('#saved');
+    try{note.value=localStorage.getItem('nap-time-builds-pocket-note')||'';}catch{}
+    document.querySelector('#save').addEventListener('click',()=>{try{localStorage.setItem('nap-time-builds-pocket-note',note.value);saved.textContent=note.value?'Saved on this device.':'Note cleared.';}catch{saved.textContent='Storage is unavailable in this browser.';}});
+  </script></body></html>
