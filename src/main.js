@@ -20,7 +20,7 @@ function artwork(episode) {
   if (episode.artwork === 'notes') {
     return `<div class="art art-notes" aria-hidden="true"><span class="tape"></span><div class="paper"><span class="paper-kicker">A NOTE TO FUTURE ME</span><strong>one<br>next<br>step</strong><span class="scribble"></span></div><span class="orbit orbit-one"></span><span class="orbit orbit-two"></span><span class="art-index">02 / 02</span></div>`;
   }
-  return `<div class="art art-timer" aria-hidden="true"><span class="timer-label">THE NAP SPRINT</span><span class="timer-number">15<span>:</span>00</span><span class="timer-ring"></span><span class="timer-caption">a little focus goes a long way</span><span class="art-index">01 / 02</span></div>`;
+  return `<div class="art art-timer" aria-hidden="true"><span class="timer-label">THE NAP SPRINT</span><span class="timer-number">50<span>:</span>00</span><span class="timer-ring"></span><span class="timer-caption">a little focus goes a long way</span><span class="art-index">01 / 02</span></div>`;
 }
 
 function episodeCard(episode) {
@@ -52,12 +52,12 @@ app.innerHTML = `
       <div class="hero-copy">
         <p class="eyebrow"><span class="live-dot"></span> FIELD NOTES FROM THE NAP WINDOW</p>
         <h1 id="hero-title">Little apps.<br><em>Little windows.</em></h1>
-        <p class="hero-story">Dad of three + ServiceNow architect, building small apps in the 15-minute nap window.</p>
+        <p class="hero-story">Dad of three + ServiceNow architect, building small apps in the 50-minute nap window.</p>
         <a class="hero-cta" href="#episodes">SEE WHAT’S ON THE BUILD LIST <span aria-hidden="true">↓</span></a>
       </div>
       <div class="hero-art" aria-label="A tiny daily build timer showing fifteen minutes">
         <div class="sunburst" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
-        <div class="hero-note"><span class="note-top"><span>NAP WINDOW</span><span class="note-dot"></span></span><div class="big-time">15<span>:</span>00</div><div class="note-bottom"><span>one idea</span><span class="note-arrow">↗</span><span>one small build</span></div></div>
+        <div class="hero-note"><span class="note-top"><span>NAP WINDOW</span><span class="note-dot"></span></span><div class="big-time">50<span>:</span>00</div><div class="note-bottom"><span>one idea</span><span class="note-arrow">↗</span><span>one small build</span></div></div>
         <span class="hero-stamp">BUILT<br>BETWEEN<br>NAPS</span>
         <span class="hero-squiggle" aria-hidden="true">✳</span>
       </div>

@@ -40,7 +40,7 @@ Use this small metadata shape:
 
 ## Instagram handle
 
-Set `instagramHandle` in `src/config.js` to the username without `@`. The follow section shows an obvious `@yourhandle` placeholder until it's filled in, and then becomes a real Instagram link.
+Set `instagramHandle` in `src/config.js` to the username without `@`. The follow section links directly to the account configured there; leave the value empty to show an `@yourhandle` placeholder.
 
 ## Publish
 
